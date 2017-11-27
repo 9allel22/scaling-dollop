@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="tbIDcarte" prefHeight="628.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.CrudCompanyController">
+   <children>
+      <TableView fx:id="TableCompany" layoutX="21.0" layoutY="243.0" onMouseClicked="#setTextTo" prefHeight="301.0" prefWidth="917.0">
+        <columns>
+      
+            <TableColumn fx:id="Company_Name" prefWidth="269.0" text="Company_Name" />
+            <TableColumn fx:id="Company_Offre" prefWidth="355.0" text="Company Offre" />
+            
+        </columns>
+      </TableView>
+      
+      <HBox prefHeight="60.0" prefWidth="1207.0" styleClass="box-topo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lbTitulo1" layoutX="10.0" maxWidth="1.7976931348623157E308" styleClass="titulo" text="Insurance Companies Management" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtPesquisar" onKeyPressed="#ajax" prefHeight="50.0" prefWidth="417.0" promptText="chercher" styleClass="pesquisar" />
+            <ToggleButton mnemonicParsing="false" onAction="#rechercherB">
+               <styleClass>
+                  <String fx:value="menus-tela" />
+                  <String fx:value="pesquisar" />
+               </styleClass>
+            </ToggleButton>
+           
+            <ToggleButton layoutX="1150.0" layoutY="27.0" mnemonicParsing="false" onAction="#modifier" text="">
+               <styleClass>
+                  <String fx:value="menus-tela" />
+                  <String fx:value="menu-editar" />
+               </styleClass>
+            </ToggleButton>
+            <ToggleButton layoutX="1150.0" layoutY="27.0" mnemonicParsing="false" onAction="#supprimerCarte" text="">
+               <styleClass>
+                  <String fx:value="menus-tela" />
+                  <String fx:value="menu-excluir" />
+               </styleClass>
+               <toggleGroup>
+                  <ToggleGroup fx:id="menu" />
+               </toggleGroup>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <Text layoutX="106.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name" />
+      <Text layoutX="110.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company offre" />
+      <TextField fx:id="Companyname1" layoutX="243.0" layoutY="123.0" />
+     <ComboBox fx:id="TypeOffre" layoutX="244.0" layoutY="80.0" prefWidth="150.0" promptText="Offre Type" />
+   </children>
+   <stylesheets>
+      <URL value="@CSS/custom.css" />
+      <URL value="@CSS/default.css" />
+   </stylesheets>
+</AnchorPane>

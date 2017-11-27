@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="id_stat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.StatController">
+   <children>
+      <BarChart fx:id="statXY" layoutX="79.0" layoutY="46.0" prefHeight="469.0" prefWidth="611.0" title="Insurance BarChart">
+        <xAxis>
+          <CategoryAxis fx:id="AxeX" label="Type OF INSURANCE " side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="AxeY" label="Amount" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

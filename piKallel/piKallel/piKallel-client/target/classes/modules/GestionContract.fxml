@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="tbIDcarte" prefHeight="628.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.ViewContractController">
+   <children>
+      <TableView fx:id="TableContract" layoutX="21.0" layoutY="243.0" prefHeight="301.0" prefWidth="917.0">
+        <columns>
+            <TableColumn fx:id="idcompany" prefWidth="279.0" text="The Contract " />
+            <TableColumn fx:id="description" prefWidth="228.0" text="Description" />
+            <TableColumn fx:id="enddate" prefWidth="141.0" text="End Date" />
+            <TableColumn fx:id="montant" prefWidth="115.0" text="Amount" />
+            <TableColumn fx:id="startdate" prefWidth="340.0" text="Start Date" />
+            
+        </columns>
+      </TableView>
+      
+      <HBox prefHeight="60.0" prefWidth="1207.0" styleClass="box-topo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lbTitulo1" layoutX="10.0" maxWidth="1.7976931348623157E308" styleClass="titulo" text="Contract View" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtPesquisar" prefHeight="50.0" prefWidth="417.0" promptText="chercher" styleClass="pesquisar" />
+            <ToggleButton mnemonicParsing="false" onAction="#rechercherB">
+               <styleClass>
+                  <String fx:value="menus-tela" />
+                  <String fx:value="pesquisar" />
+               </styleClass>
+            </ToggleButton>
+           
+      
+            <ToggleButton layoutX="1150.0" layoutY="27.0" mnemonicParsing="false" onAction="#supprimerCarte" text="">
+               <styleClass>
+                  <String fx:value="menus-tela" />
+                  <String fx:value="menu-excluir" />
+               </styleClass>
+               <toggleGroup>
+                  <ToggleGroup fx:id="menu" />
+               </toggleGroup>
+            </ToggleButton>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@CSS/custom.css" />
+      <URL value="@CSS/default.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="671.0" stylesheets="@CSS/bootstrap2.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.WinnerController">
+   <children>
+      <Button fx:id="youssef" contentDisplay="BOTTOM" layoutX="440.0" layoutY="192.0" mnemonicParsing="false" onAction="#randombutt" prefHeight="53.0" prefWidth="299.0" stylesheets="@bootstrap2.css" text="The Winner is : " textFill="#d76f6f" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="192.0">
+         <styleClass>
+            <String fx:value="primary" />
+            <String fx:value="action-btn" />
+            <String fx:value="arrow" />
+            <String fx:value="filler" />
+         </styleClass></Button>
+      <TextField fx:id="wintxt" layoutX="303.0" layoutY="302.0" prefHeight="75.0" prefWidth="531.0" />
+   </children>
+   <styleClass>
+      <String fx:value="primary" />
+      <String fx:value="middle" />
+   </styleClass>
+</AnchorPane>
